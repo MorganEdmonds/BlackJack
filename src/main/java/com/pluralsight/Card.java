@@ -1,10 +1,13 @@
 package com.pluralsight;
 
+//this is what a card is made of (the suit, value of that card, whether is faced up or not.)
+
 public class Card {
     private String suit;
     private String value;
     private  boolean isFaceUp;
 
+    //CONSTRUCTOR (this is how to make a card)
     public Card(String suit, String value){
         this.suit = suit;
         this.value = value;
@@ -12,6 +15,7 @@ public class Card {
 
     }
 
+    //GETTERS (this is how we get the information from a card.)
 
     public String getSuit(){
         if(isFaceUp){
@@ -21,6 +25,7 @@ public class Card {
          return "#";
         }
     }
+
 
 
     public String getValue(){
@@ -75,11 +80,17 @@ public class Card {
         return 0;
     }
 
+    //METHODS to change whether a cards status is faced up or down.
+
     public boolean isFaceUp(){
         return isFaceUp;
     }
 
+    public void flipCard(){
+        isFaceUp = ! isFaceUp;
+         //x = y
 
+    }
 
 
 }
